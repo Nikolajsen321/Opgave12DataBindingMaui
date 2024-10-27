@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Opgave12DataBindingMaui.MainPage">
+
+    <VerticalStackLayout>
+        <Label Text="{Binding Model}"/>
+
+
+        <Label Text="{Binding Heste, Mode=OneWay}"/>
+        
+
+        <Entry Text="{Binding Path=Model}"/>
+        <Entry Text="{Binding Path=Heste}"/>
+
+
+        <HorizontalStackLayout>
+            <Label Text="{Binding Path= Elbil}"/>
+            <CheckBox IsChecked="{Binding Path= Elbil, Mode=OneWay}" />
+        </HorizontalStackLayout>
+
+     
+       
+        
+        
+        
+        <!--Knap til at aktivere event  altså ændre obejktets properties-->
+        <Button Text="Opdatere Bil" Clicked="OnChangedPropertiesClicked"/>
+
+
+
+    </VerticalStackLayout>
+
+</ContentPage>
